@@ -9,14 +9,15 @@ import model.entities.Department;
 
 public class DepartmentService {
 
-	private DepartmentDao dao = DaoFactory.createDepartmentDao();		
-	
-	public List<Department> findAll() { /* Vamos mockar os dados: MOCK só quando
-	 retorna os dados de "mentirinha"*/
+	private DepartmentDao dao = DaoFactory.createDepartmentDao();
+
+	public List<Department> findAll() { /*
+										 * Vamos mockar os dados: MOCK só quando retorna os dados de "mentirinha"
+										 */
 		return dao.findAll();
 	}
 
-	/*public void saveOrUpdate(Department obj) {
+	public void saveOrUpdate(Department obj) {
 		if (obj.getId() == null) {
 			dao.insert(obj);
 		} else {
@@ -24,7 +25,7 @@ public class DepartmentService {
 		}
 	}
 
-	public void remove(Department obj) {
-		dao.deleteById(obj.getId());
-	}*/
+	/*
+	 * public void remove(Department obj) { dao.deleteById(obj.getId()); }
+	 */
 }
